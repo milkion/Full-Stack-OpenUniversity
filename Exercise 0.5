@@ -1,0 +1,30 @@
+Sequence Diagram:
+
+browser ->> server: GET
+https://studies.cs.helsinki.fi/exampleapp/spa
+activate server
+server-->>browser: text/HTML
+deactivate server
+
+browser ->> server: GET
+https://studies.cs.helsinki.fi/exampleapp/main.css
+activate server
+server ->> browser: CSS file
+deactivate server
+
+browser ->> server: GET
+https://studies.cs.helsinki.fi/exampleapp/spa.js
+activate server
+server ->> browser: javascript file
+deactivate server
+
+  Browser starts executing JS code that fetches the json file
+
+
+browser ->> server: GET
+https://studies.cs.helsinki.fi/exampleapp/data.json
+activate server
+server ->> browser: [{"content":"foobar","date":"2024-03-28T21:09:55.516Z"},{" ...
+deactivate server
+
+  browser executes callback function that renders notes.
