@@ -22,6 +22,7 @@ const App = () => {
 
   console.log("max votes:", maxVotes)
   console.log("quote max votes:", votes.indexOf(maxVotes))
+  
 
   const max_index = votes.indexOf(maxVotes)
 
